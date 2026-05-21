@@ -65,11 +65,11 @@ export default function Footer() {
           </h4>
           <div className="flex flex-col gap-4">
             <a
-              href="tel:8645550000"
+              href="tel:8644173947"
               className="flex items-center gap-3 font-paragraph text-sm text-white/55 hover:text-white transition-colors duration-200"
             >
               <Phone className="w-4 h-4 flex-shrink-0" />
-              (864) 555-0000
+              (864) 417-3947
             </a>
             <div className="flex items-start gap-3 font-paragraph text-sm text-white/55">
               <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />

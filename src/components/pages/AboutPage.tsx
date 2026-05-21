@@ -99,18 +99,18 @@ export default function AboutPage() {
                 Jesus Lopez Painting
               </p>
               <h2 className="font-heading text-5xl lg:text-6xl text-foreground mb-8 leading-[1]">
-                Quality work,<br />
-                <span className="italic">every project.</span>
+                20 years of experience,<br />
+                <span className="italic">one standard of work.</span>
               </h2>
               <div className="space-y-5 font-paragraph text-base text-secondary leading-relaxed">
                 <p>
-                  Jesus Lopez Painting is a locally owned painting company serving homes across Greenville and Upstate South Carolina. With over a decade of experience in residential painting, Jesus built this company on one principle: do the work right the first time.
+                  Jesus Lopez Painting is a locally owned company serving residential and commercial properties across Greenville and Upstate South Carolina. With over two decades of experience, Jesus has built a reputation for professionalism, integrity, and a genuine passion for the craft.
                 </p>
                 <p>
-                  From single-room refreshes to full exterior repaints, every project gets the same level of preparation and attention to detail. That means proper surface prep, clean cut-ins, and a finished product that looks good and holds up over time.
+                  From the initial consultation to the final brushstroke, we prioritize clear communication and close collaboration with every client. You always know what to expect, what it costs, and when it will be done.
                 </p>
                 <p>
-                  We are a small, tight-knit crew. When you hire Jesus Lopez Painting, you get experienced painters who take pride in their work — not a rotating roster of subcontractors.
+                  Whether it is a single room, a full exterior, or a commercial property, every project gets the same level of care — thorough prep, quality materials, and a finished result you will be proud of.
                 </p>
               </div>
 
@@ -203,11 +203,11 @@ export default function AboutPage() {
               </h3>
               <div className="flex flex-col gap-4">
                 <a
-                  href="tel:8645550000"
+                  href="tel:8644173947"
                   className="inline-flex items-center gap-3 bg-accent-gold text-foreground font-paragraph font-semibold px-7 py-3.5 rounded-full hover:bg-accent-gold/90 transition-all duration-300 w-fit"
                 >
                   <Phone className="w-4 h-4" />
-                  (864) 555-0000
+                  (864) 417-3947
                 </a>
                 <Link
                   to="/contact"

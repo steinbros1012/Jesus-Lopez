@@ -162,11 +162,11 @@ export default function ServicesPage() {
                 Get Free Estimate <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:8645550000"
+                href="tel:8644173947"
                 className="inline-flex items-center justify-center gap-2 border-2 border-white/25 text-white font-paragraph font-semibold px-8 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />
-                (864) 555-0000
+                (864) 417-3947
               </a>
             </motion.div>
           </div>

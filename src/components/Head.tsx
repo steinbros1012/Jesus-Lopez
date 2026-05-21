@@ -6,7 +6,7 @@ export const Head = () => {
       <title>Jesus Lopez Painting | Greenville, SC</title>
       <meta
         name="description"
-        content="Jesus Lopez Painting provides interior and exterior painting, cabinet refinishing, drywall repair, pressure washing, and trim work for homes across Greenville, Greer, Simpsonville, Mauldin, and Upstate South Carolina."
+        content="Jesus Lopez Painting — over 20 years of residential and commercial painting in Greenville, SC. Interior, exterior, cabinet refinishing, drywall repair, and pressure washing across Upstate South Carolina."
       />
     </>
   );

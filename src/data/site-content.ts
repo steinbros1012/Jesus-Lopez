@@ -38,6 +38,16 @@ export const paintingServices: PaintingServices[] = [
     isFeatured: true,
   },
   {
+    _id: "jl-service-commercial",
+    serviceName: "Commercial Painting",
+    shortSummary: "Professional results for offices, retail, and commercial properties.",
+    description:
+      "Jesus Lopez Painting serves commercial clients across Upstate South Carolina. Offices, retail spaces, warehouses, and multi-unit properties all receive the same level of preparation, professionalism, and care as our residential work. We work around your schedule to minimize disruption.",
+    serviceImage: "",
+    serviceAreaContext: primaryServiceArea,
+    isFeatured: true,
+  },
+  {
     _id: "jl-service-cabinets",
     serviceName: "Cabinet Painting",
     shortSummary: "Update your kitchen without the cost of a full remodel.",
@@ -65,7 +75,7 @@ export const paintingServices: PaintingServices[] = [
       "Baseboards, crown molding, window casings, doors, and accent features all require a steady hand and an eye for clean lines. Careful trim work is what separates a good paint job from a great one.",
     serviceImage: "",
     serviceAreaContext: primaryServiceArea,
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     _id: "jl-service-pressure-washing",

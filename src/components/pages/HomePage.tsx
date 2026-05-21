@@ -61,10 +61,10 @@ export default function HomePage() {
   }, []);
 
   const stats = [
-    { value: '300+', label: 'Projects Completed' },
+    { value: '20+', label: 'Years Experience' },
     { value: '5.0★', label: 'Google Rating' },
     { value: 'FREE', label: 'Estimates' },
-    { value: '10+', label: 'Years Experience' },
+    { value: 'RESI & COMM', label: 'Residential & Commercial' },
   ];
 
   return (
@@ -123,7 +123,7 @@ export default function HomePage() {
             transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="font-paragraph text-base lg:text-lg text-white/70 mb-10 leading-relaxed max-w-xl mx-auto"
           >
-            Interior and exterior painting, cabinet refinishing, drywall repair, and trim work for homes across Greenville and Upstate South Carolina.
+            Over 20 years of residential and commercial painting across Greenville and Upstate South Carolina. Interior, exterior, cabinets, and more.
           </motion.p>
 
           <motion.div
@@ -139,11 +139,11 @@ export default function HomePage() {
               Get Free Estimate <ArrowRight className="w-4 h-4" />
             </Link>
             <a
-              href="tel:8645550000"
+              href="tel:8644173947"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/35 text-white font-paragraph font-semibold px-9 py-4 rounded-full hover:border-white/70 hover:bg-white/8 transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
-              (864) 555-0000
+              (864) 417-3947
             </a>
           </motion.div>
 
@@ -451,11 +451,11 @@ export default function HomePage() {
               Get Free Estimate
             </Link>
             <a
-              href="tel:8645550000"
+              href="tel:8644173947"
               className="flex items-center justify-center gap-2 border-2 border-white/25 text-white font-paragraph font-semibold px-10 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
-              (864) 555-0000
+              (864) 417-3947
             </a>
           </motion.div>
         </div>

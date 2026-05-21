@@ -50,9 +50,9 @@ export default function ContactPage() {
               {
                 icon: <Phone className="w-4 h-4 text-primary" />,
                 label: 'Call or Text',
-                value: '(864) 555-0000',
+                value: '(864) 417-3947',
                 sub: 'Best way to reach us quickly',
-                href: 'tel:8645550000',
+                href: 'tel:8644173947',
               },
               {
                 icon: <MapPin className="w-4 h-4 text-primary" />,

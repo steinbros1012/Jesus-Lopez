@@ -61,7 +61,7 @@ export default function EstimateSection() {
       if (!response.ok) throw new Error('Failed');
       setIsSubmitted(true);
     } catch {
-      alert('Failed to submit. Please call us at (864) 555-0000.');
+      alert('Failed to submit. Please call us at (864) 417-3947.');
     } finally {
       setIsSubmitting(false);
     }
@@ -99,11 +99,11 @@ export default function EstimateSection() {
             </p>
 
             <a
-              href="tel:8645550000"
+              href="tel:8644173947"
               className="inline-flex items-center gap-3 bg-accent-gold text-foreground font-paragraph font-semibold px-8 py-4 rounded-full hover:bg-accent-gold/90 hover:shadow-[0_6px_28px_rgba(200,146,42,0.4)] transition-all duration-300 mb-10"
             >
               <Phone className="w-5 h-5" />
-              Call Now: (864) 555-0000
+              Call Now: (864) 417-3947
             </a>
 
             <div className="flex flex-col gap-3">

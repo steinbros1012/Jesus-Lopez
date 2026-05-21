@@ -77,11 +77,11 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <a
-              href="tel:8645550000"
+              href="tel:8644173947"
               className="flex items-center gap-2 font-paragraph text-sm text-foreground/65 hover:text-primary transition-colors duration-200"
             >
               <Phone className="w-4 h-4" />
-              <span>(864) 555-0000</span>
+              <span>(864) 417-3947</span>
             </a>
             <Link
               to="/contact"
@@ -162,11 +162,11 @@ export default function Header() {
                 className="mt-8 flex flex-col gap-4"
               >
                 <a
-                  href="tel:8645550000"
+                  href="tel:8644173947"
                   className="flex items-center gap-3 font-paragraph text-base text-white/80"
                 >
                   <Phone className="w-5 h-5" />
-                  (864) 555-0000
+                  (864) 417-3947
                 </a>
                 <Link
                   to="/contact"
