@@ -9,7 +9,7 @@ export default function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 60);
+    const fn = () => setScrolled(window.scrollY > 10);
     fn();
     window.addEventListener('scroll', fn, { passive: true });
     return () => window.removeEventListener('scroll', fn);
@@ -62,7 +62,7 @@ export default function Header() {
                 className={`relative px-4 py-2 font-paragraph text-sm transition-colors duration-200 rounded ${
                   isActive(link.path)
                     ? scrolled ? 'text-primary font-semibold' : 'text-white font-semibold'
-                    : scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/65 hover:text-white'
+                    : scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/85 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -82,7 +82,7 @@ export default function Header() {
             <a
               href="tel:8644173947"
               className={`flex items-center gap-2 font-paragraph text-sm transition-colors duration-200 ${
-                scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/65 hover:text-white'
+                scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/85 hover:text-white'
               }`}
             >
               <Phone className="w-4 h-4" />
