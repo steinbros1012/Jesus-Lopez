@@ -10,9 +10,10 @@ import { customerReviews, paintingServices } from '@/data/site-content';
 import { useCountUp } from '@/hooks/useCountUp';
 
 function StatCounter({ value, label, light = false }: { value: string; label: string; light?: boolean }) {
-  const isNumeric = /^\d+/.test(value);
-  const numericPart = parseInt(value.replace(/\D/g, ''), 10);
-  const suffix = value.replace(/^\d+/, '');
+  // Only animate whole integers — skip decimals like "5.0★"
+  const isNumeric = /^\d+$/.test(value.replace(/[+★]$/, '')) && !value.includes('.');
+  const numericPart = isNumeric ? parseInt(value.replace(/\D/g, ''), 10) : 0;
+  const suffix = isNumeric ? value.replace(/^\d+/, '') : '';
   const { count, ref } = useCountUp(isNumeric ? numericPart : 0);
 
   return (
@@ -48,7 +49,7 @@ export default function HomePage() {
   const [reviews, setReviews] = useState<CustomerReviews[]>([]);
 
   useEffect(() => {
-    setServices(paintingServices.filter((s) => s.isFeatured));
+    setServices(paintingServices.slice(0, 6));
     setReviews(customerReviews);
   }, []);
 
@@ -195,7 +196,7 @@ export default function HomePage() {
               { value: '20+', label: 'Years Experience' },
               { value: '5.0★', label: 'Google Rating' },
               { value: 'FREE', label: 'Estimates' },
-              { value: 'RESI & COMM', label: 'Residential & Commercial' },
+              { value: 'Greenville', label: 'SC Based' },
             ].map((stat, i) => (
               <div key={i} className="flex justify-center">
                 <StatCounter value={stat.value} label={stat.label} light />
