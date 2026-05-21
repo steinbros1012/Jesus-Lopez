@@ -32,11 +32,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'bg-white/98 backdrop-blur-md shadow-[0_2px_24px_rgba(27,58,45,0.1)] border-b border-gray-100'
-          : 'bg-gradient-to-b from-black/30 to-transparent backdrop-blur-none'
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-[0_2px_16px_rgba(27,58,45,0.07)]"
     >
       <div className="max-w-[100rem] mx-auto px-6 lg:px-16">
         <div className="flex items-center justify-between h-18 py-4">
@@ -46,9 +42,7 @@ export default function Header() {
             <span className="font-paragraph text-[0.58rem] uppercase tracking-[0.4em] text-accent-gold font-semibold">
               Painting
             </span>
-            <span className={`font-heading text-2xl lg:text-[1.7rem] leading-none transition-colors duration-400 ${
-              scrolled ? 'text-primary group-hover:text-primary-light' : 'text-white group-hover:text-white/80'
-            }`}>
+            <span className="font-heading text-2xl lg:text-[1.7rem] text-primary leading-none group-hover:text-primary-light transition-colors duration-300">
               Jesus Lopez
             </span>
           </Link>
@@ -61,8 +55,8 @@ export default function Header() {
                 to={link.path}
                 className={`relative px-4 py-2 font-paragraph text-sm transition-colors duration-200 rounded ${
                   isActive(link.path)
-                    ? scrolled ? 'text-primary font-semibold' : 'text-white font-semibold'
-                    : scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/85 hover:text-white'
+                    ? 'text-primary font-semibold'
+                    : 'text-foreground/60 hover:text-primary'
                 }`}
               >
                 {link.label}
@@ -82,7 +76,7 @@ export default function Header() {
             <a
               href="tel:8644173947"
               className={`flex items-center gap-2 font-paragraph text-sm transition-colors duration-200 ${
-                scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/85 hover:text-white'
+                'text-foreground/60 hover:text-primary'
               }`}
             >
               <Phone className="w-4 h-4" />
@@ -91,9 +85,7 @@ export default function Header() {
             <Link
               to="/contact"
               className={`font-paragraph font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 ${
-                scrolled
-                  ? 'bg-primary text-white hover:bg-primary-light hover:shadow-[0_4px_20px_rgba(27,58,45,0.3)]'
-                  : 'bg-accent-gold text-foreground hover:bg-accent-gold/90 hover:shadow-[0_4px_20px_rgba(200,146,42,0.4)]'
+                'bg-primary text-white hover:bg-primary-light hover:shadow-[0_4px_20px_rgba(27,58,45,0.3)]'
               }`}
             >
               Free Estimate
@@ -103,9 +95,7 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`lg:hidden p-2 relative w-10 h-10 flex items-center justify-center transition-colors duration-300 ${
-              scrolled ? 'text-foreground' : 'text-white'
-            }`}
+            className="lg:hidden p-2 relative w-10 h-10 flex items-center justify-center text-foreground"
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait" initial={false}>
