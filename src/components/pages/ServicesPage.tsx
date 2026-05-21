@@ -19,15 +19,16 @@ export default function ServicesPage() {
       <Header />
 
       {/* ─── PAGE HEADER ─── */}
-      <section
-        className="bg-primary pt-32 pb-20 lg:pt-40 lg:pb-24 relative overflow-hidden"
-      >
-        {/* Subtle diagonal accent */}
+      <section className="bg-primary pt-32 pb-20 lg:pt-40 lg:pb-24 relative overflow-hidden">
         <div
-          className="absolute right-0 top-0 bottom-0 w-1/3 opacity-[0.04] pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 20px)',
+            backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 48px)',
           }}
+        />
+        <div
+          className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at 90% 20%, rgba(200,146,42,0.1) 0%, transparent 60%)' }}
         />
         <div className="max-w-[100rem] mx-auto px-6 lg:px-16 relative z-10">
           <motion.div
@@ -47,8 +48,8 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className="origin-left h-0.5 w-20 bg-accent-gold mb-6"
             />
-            <p className="font-paragraph text-base lg:text-lg text-white/65 max-w-2xl">
-              Interior, exterior, cabinets, trim, drywall repair, and pressure washing — every service is built around careful prep and a finish that holds up.
+            <p className="font-paragraph text-base lg:text-lg text-white/60 max-w-2xl">
+              Interior, exterior, cabinets, trim, drywall repair, and pressure washing. Every service is built around careful prep and a finish that holds up.
             </p>
           </motion.div>
         </div>
@@ -63,59 +64,47 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.55, delay: 0.05 * index, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.55, delay: 0.04 * index, ease: [0.22, 1, 0.36, 1] }}
               className="group border-t border-gray-100 py-10 lg:py-14 relative"
             >
               {/* Animated left accent bar on hover */}
               <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-accent-gold scale-y-0 group-hover:scale-y-100 origin-top transition-transform duration-500" />
 
-              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pl-0 group-hover:pl-5 transition-all duration-500">
-                {/* Number */}
-                <div className="lg:col-span-1 hidden lg:block">
-                  <span className="font-heading text-5xl text-accent-gold/40 italic leading-none group-hover:text-accent-gold inline-block transition-colors duration-300">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                </div>
-
-                {/* Content */}
-                <div className="lg:col-span-7">
-                  <div className="flex items-center gap-3 mb-1 lg:hidden">
-                    <span className="font-heading text-3xl text-accent-gold italic">
+              <div className="pl-0 group-hover:pl-6 transition-all duration-500">
+                <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                  {/* Number */}
+                  <div className="lg:col-span-1 hidden lg:block pt-1">
+                    <span className="font-heading text-5xl text-accent-gold/30 italic leading-none group-hover:text-accent-gold inline-block transition-colors duration-300">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
-                  <h2 className="font-heading text-3xl lg:text-4xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                    {service.serviceName}
-                  </h2>
-                  {service.shortSummary && (
-                    <p className="font-paragraph text-base font-semibold text-accent-gold mb-3">
-                      {service.shortSummary}
-                    </p>
-                  )}
-                  {service.description && (
-                    <p className="font-paragraph text-base text-secondary leading-relaxed max-w-2xl">
-                      {service.description}
-                    </p>
-                  )}
-                  {service.serviceAreaContext && (
-                    <p className="font-paragraph text-sm text-secondary/55 mt-4">
-                      Serving: {service.serviceAreaContext}
-                    </p>
-                  )}
-                  <div className="mt-5 flex items-center gap-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                    <Link to="/contact" className="font-paragraph text-xs uppercase tracking-widest text-accent-gold font-semibold hover:text-accent-gold/80">
-                      Get estimate
-                    </Link>
-                    <ArrowRight className="w-3.5 h-3.5 text-accent-gold" />
-                  </div>
-                </div>
 
-                {/* Image placeholder */}
-                <div className="lg:col-span-4">
-                  <div className="aspect-[16/9] overflow-hidden rounded-xl bg-gradient-to-br from-primary/80 to-primary-light flex items-center justify-center">
-                    <span className="font-heading text-6xl text-white/10 italic">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
+                  {/* Content */}
+                  <div className="lg:col-span-11">
+                    <div className="flex items-center gap-3 mb-1 lg:hidden">
+                      <span className="font-heading text-3xl text-accent-gold italic">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                    </div>
+                    <h2 className="font-heading text-3xl lg:text-4xl text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+                      {service.serviceName}
+                    </h2>
+                    {service.shortSummary && (
+                      <p className="font-paragraph text-base font-semibold text-accent-gold mb-3">
+                        {service.shortSummary}
+                      </p>
+                    )}
+                    {service.description && (
+                      <p className="font-paragraph text-base text-secondary leading-relaxed max-w-2xl">
+                        {service.description}
+                      </p>
+                    )}
+                    <div className="mt-5 flex items-center gap-2 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                      <Link to="/contact" className="font-paragraph text-xs uppercase tracking-widest text-accent-gold font-semibold hover:text-accent-gold/80">
+                        Get estimate
+                      </Link>
+                      <ArrowRight className="w-3.5 h-3.5 text-accent-gold" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -144,7 +133,7 @@ export default function ServicesPage() {
               <h2 className="font-heading text-5xl lg:text-6xl text-white mb-4 leading-[0.97]">
                 Not sure which service fits your project?
               </h2>
-              <p className="font-paragraph text-base text-white/55">
+              <p className="font-paragraph text-base text-white/50">
                 Call Jesus directly or fill out the estimate form and he will walk through the project with you.
               </p>
             </motion.div>
@@ -163,7 +152,7 @@ export default function ServicesPage() {
               </Link>
               <a
                 href="tel:8644173947"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/25 text-white font-paragraph font-semibold px-8 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border border-white/25 text-white font-paragraph font-semibold px-8 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />
                 (864) 417-3947

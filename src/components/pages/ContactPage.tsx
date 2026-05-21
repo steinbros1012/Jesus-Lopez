@@ -12,10 +12,14 @@ export default function ContactPage() {
       {/* ─── PAGE HEADER ─── */}
       <section className="bg-primary pt-32 pb-20 lg:pt-40 lg:pb-24 relative overflow-hidden">
         <div
-          className="absolute right-0 top-0 bottom-0 w-1/3 opacity-[0.04] pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 20px)',
+            backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 48px)',
           }}
+        />
+        <div
+          className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at 90% 20%, rgba(200,146,42,0.1) 0%, transparent 60%)' }}
         />
         <div className="max-w-[100rem] mx-auto px-6 lg:px-16 relative z-10">
           <motion.div

@@ -13,10 +13,14 @@ export default function ReviewsPage() {
       {/* ─── PAGE HEADER ─── */}
       <section className="bg-primary pt-32 pb-20 lg:pt-40 lg:pb-24 relative overflow-hidden">
         <div
-          className="absolute right-0 top-0 bottom-0 w-1/3 opacity-[0.04] pointer-events-none"
+          className="absolute inset-0 pointer-events-none"
           style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, #ffffff 0px, #ffffff 1px, transparent 1px, transparent 20px)',
+            backgroundImage: 'repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, transparent 1px, transparent 48px)',
           }}
+        />
+        <div
+          className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at 90% 20%, rgba(200,146,42,0.1) 0%, transparent 60%)' }}
         />
         <div className="max-w-[100rem] mx-auto px-6 lg:px-16 relative z-10">
           <motion.div
@@ -98,14 +102,12 @@ export default function ReviewsPage() {
             <p className="font-paragraph text-sm text-secondary mb-6">
               All reviews are from Google. We never filter or hide feedback.
             </p>
-            <a
-              href="https://g.page/r/review"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 border-2 border-primary text-primary font-paragraph font-semibold px-8 py-3.5 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 border border-primary text-primary font-paragraph font-semibold px-8 py-3.5 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
             >
-              Leave a Google Review <ArrowRight className="w-4 h-4" />
-            </a>
+              Get Your Free Estimate <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -178,7 +180,7 @@ export default function ReviewsPage() {
             </Link>
             <a
               href="tel:8644173947"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/25 text-white font-paragraph font-semibold px-9 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
+              className="inline-flex items-center justify-center gap-2 border border-white/25 text-white font-paragraph font-semibold px-9 py-4 rounded-full hover:border-white/60 hover:bg-white/5 transition-all duration-300"
             >
               <Phone className="w-4 h-4" />
               (864) 417-3947

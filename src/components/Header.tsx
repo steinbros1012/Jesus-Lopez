@@ -9,7 +9,8 @@ export default function Header() {
   const location = useLocation();
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 30);
+    const fn = () => setScrolled(window.scrollY > 60);
+    fn();
     window.addEventListener('scroll', fn, { passive: true });
     return () => window.removeEventListener('scroll', fn);
   }, []);
@@ -33,8 +34,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/97 backdrop-blur-md shadow-[0_2px_24px_rgba(27,58,45,0.08)] border-b border-gray-100'
-          : 'bg-white/90 backdrop-blur-sm border-b border-gray-100/60'
+          ? 'bg-white/98 backdrop-blur-md shadow-[0_2px_24px_rgba(27,58,45,0.1)] border-b border-gray-100'
+          : 'bg-transparent'
       }`}
     >
       <div className="max-w-[100rem] mx-auto px-6 lg:px-16">
@@ -45,7 +46,9 @@ export default function Header() {
             <span className="font-paragraph text-[0.58rem] uppercase tracking-[0.4em] text-accent-gold font-semibold">
               Painting
             </span>
-            <span className="font-heading text-2xl lg:text-[1.7rem] text-primary leading-none group-hover:text-primary-light transition-colors duration-300">
+            <span className={`font-heading text-2xl lg:text-[1.7rem] leading-none transition-colors duration-400 ${
+              scrolled ? 'text-primary group-hover:text-primary-light' : 'text-white group-hover:text-white/80'
+            }`}>
               Jesus Lopez
             </span>
           </Link>
@@ -58,8 +61,8 @@ export default function Header() {
                 to={link.path}
                 className={`relative px-4 py-2 font-paragraph text-sm transition-colors duration-200 rounded ${
                   isActive(link.path)
-                    ? 'text-primary font-semibold'
-                    : 'text-foreground/65 hover:text-primary'
+                    ? scrolled ? 'text-primary font-semibold' : 'text-white font-semibold'
+                    : scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/65 hover:text-white'
                 }`}
               >
                 {link.label}
@@ -78,14 +81,20 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:8644173947"
-              className="flex items-center gap-2 font-paragraph text-sm text-foreground/65 hover:text-primary transition-colors duration-200"
+              className={`flex items-center gap-2 font-paragraph text-sm transition-colors duration-200 ${
+                scrolled ? 'text-foreground/60 hover:text-primary' : 'text-white/65 hover:text-white'
+              }`}
             >
               <Phone className="w-4 h-4" />
               <span>(864) 417-3947</span>
             </a>
             <Link
               to="/contact"
-              className="bg-primary text-white font-paragraph font-semibold text-sm px-5 py-2.5 rounded-full hover:bg-primary-light hover:shadow-[0_4px_20px_rgba(27,58,45,0.3)] transition-all duration-300"
+              className={`font-paragraph font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 ${
+                scrolled
+                  ? 'bg-primary text-white hover:bg-primary-light hover:shadow-[0_4px_20px_rgba(27,58,45,0.3)]'
+                  : 'bg-accent-gold text-foreground hover:bg-accent-gold/90 hover:shadow-[0_4px_20px_rgba(200,146,42,0.4)]'
+              }`}
             >
               Free Estimate
             </Link>
@@ -94,7 +103,9 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-foreground relative w-10 h-10 flex items-center justify-center"
+            className={`lg:hidden p-2 relative w-10 h-10 flex items-center justify-center transition-colors duration-300 ${
+              scrolled ? 'text-foreground' : 'text-white'
+            }`}
             aria-label="Toggle menu"
           >
             <AnimatePresence mode="wait" initial={false}>
